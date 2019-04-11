@@ -1,13 +1,11 @@
-# miyanews-app
-How to use
+# Miya News
 
-run 
-- npm install
-- react-native eject
-- react-native link
+## prerequisite
+- expo cli
 
-run on android emulator
-- react-native run-android
+## How to install it 
+- Clone this repository
+- Get into the folder that you have cloned to
+- Run `npm install`
+- Run `expo start`
 
-run on ios emulator
-- react-native run-ios

@@ -1,31 +1,16 @@
 {
-  "name": "WPtest",
-  "version": "0.0.1",
+  "name": "expomiya",
+  "version": "0.0.0",
+  "description": "No description",
+  "author": null,
   "private": true,
-  "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest",
-    "lint": "eslint ."
-  },
+  "main": "node_modules/expo/AppEntry.js",
   "dependencies": {
-    "less": "^3.9.0",
-    "less-loader": "^4.1.0",
-    "native-base": "^2.12.1",
-    "react": "16.8.3",
-    "react-native": "0.59.2",
-    "react-wp-api": "^0.1.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.4.0",
-    "@babel/runtime": "^7.4.2",
-    "@react-native-community/eslint-config": "^0.0.3",
-    "babel-jest": "^24.5.0",
-    "eslint": "^5.16.0",
-    "jest": "^24.5.0",
-    "metro-react-native-babel-preset": "^0.53.1",
-    "react-test-renderer": "16.8.3"
-  },
-  "jest": {
-    "preset": "react-native"
+    "expo": "^32.0.0",
+    "react": "16.5.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
+    "native-base": "^2.8.2",
+    "react-native-render-html": "4.1.2",
+    "react-navigation": "^3.0.9"
   }
 }

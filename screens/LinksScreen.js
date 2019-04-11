@@ -14,7 +14,7 @@ export default class LinksScreen extends React.Component {
   }
 
   _handlePressEmurgo = async () => {
-    WebBrowser.openBrowserAsync('http://emurgo.io');
+    WebBrowser.openBrowserAsync('http://emurgohk.io');
   };
 
   _handlePressCardanoUpdate = () => {

@@ -3,7 +3,7 @@
   "expoServerPort": null,
   "packagerPort": null,
   "packagerPid": null,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null
+  "expoServerNgrokUrl": "https://zi-kjg.anonymous.miyanews-app.exp.direct",
+  "packagerNgrokUrl": "https://packager.zi-kjg.anonymous.miyanews-app.exp.direct",
+  "ngrokPid": 5685
 }

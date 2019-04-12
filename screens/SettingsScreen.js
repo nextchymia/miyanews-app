@@ -11,7 +11,6 @@ export default class SettingsScreen extends React.Component {
      * content, we just wanted to give you a quick view of your config */
     return (
       <Container>
-        <Header />
         <Content>
           <ListItem icon>
             <Left>
@@ -20,7 +19,7 @@ export default class SettingsScreen extends React.Component {
               </Button>
             </Left>
             <Body>
-              <Text>Dark Theme</Text>
+              <Text>Setting A</Text>
             </Body>
             <Right>
               <Switch value={false} />

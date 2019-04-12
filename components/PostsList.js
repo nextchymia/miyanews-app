@@ -1,6 +1,7 @@
 import React from 'react';
-import { View, FlatList , ActivityIndicator} from 'react-native';
-import { Text, Left, Body, Card, CardItem, Thumbnail } from 'native-base';
+import { View, FlatList , ActivityIndicator, StyleSheet} from 'react-native';
+import { Text, Left, Body, Card, CardItem, Thumbnail, Container ,List,ListItem, Content} from 'native-base';
+import HTML from 'react-native-render-html';
 
 var link = "https://miyanews.com";
 
@@ -134,16 +135,15 @@ export default class PostList extends React.Component {
     }
     catch{(err)=>err}
     var card = 
-    <Card>
-        <CardItem header button onPress={() => navigate('Post', { link:item.link})}>
+    <ListItem button onPress={() => navigate('Post', { link:item.link})}>
           <Left>
           <Thumbnail source={{uri: imgurl}}/>
           <Body>
-          <Text>{item.title.rendered}</Text>
+          <Text header>{item.title.rendered}</Text>
+          <HTML baseFontStyle={styles.ExcerptText} html={item.excerpt.rendered} />
           </Body>
           </Left> 
-        </CardItem>
-    </Card>;
+    </ListItem>;
     return card;
   };
 
@@ -151,13 +151,14 @@ export default class PostList extends React.Component {
 
     if(this.state.isRefreshing){
       return(
-        <View style={{flex: 1}}>
+        <Content>
           <ActivityIndicator/>
-        </View>
+        </Content>
       )
     }
 
     return(
+      <List>
           <FlatList
               data={this.state.dataSource}
               renderItem={this._renderItem.bind(this)}
@@ -165,11 +166,18 @@ export default class PostList extends React.Component {
               refreshing={this.state.isRefreshing}
               onRefresh={this._Refresh.bind(this)}
               onEndReached={this._Load.bind(this)}
-              onEndReachedThreshold={0.01}
+              onEndReachedThreshold={0.07}
               keyExtractor={this._keyExtractor}
               emptyText="No Items"
             />
+      </List>
     );
   }
 
 }
+
+const styles = StyleSheet.create({
+  ExcerptText: {
+    fontSize: 13,
+  },
+});

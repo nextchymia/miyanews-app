@@ -5,7 +5,10 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+import PriceScreen from '../screens/PriceScreen';
 import Post from '../screens/Post';
+
+let Currentcolor = 'Black';
 
 const HomeStack = createStackNavigator(
   {
@@ -34,6 +37,21 @@ HomeStack.navigationOptions = {
     />
   ),
 };
+
+const PriceStack = createStackNavigator({
+  Settings: PriceScreen,
+});
+
+PriceStack.navigationOptions = {
+  tabBarLabel: 'Prices',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      focused={focused}
+      name={Platform.OS === 'ios' ? 'logo-bitcoin' : 'logo-bitcoin'}
+    />
+  ),
+};
+
 
 const LinksStack = createStackNavigator(
   {
@@ -73,8 +91,12 @@ SettingsStack.navigationOptions = {
   ),
 };
 
-export default createBottomTabNavigator({
+
+const BottomTab = createBottomTabNavigator({
   HomeStack,
+  PriceStack,
   LinksStack,
   SettingsStack,
 });
+
+export default BottomTab;

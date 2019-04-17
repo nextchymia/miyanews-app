@@ -12,7 +12,7 @@ import PostList from '../components/PostsList'
 
 export default class HomeScreen extends Component {
   static navigationOptions = {
-    title: 'Miya News',
+    title: '米亚财经',
   };
   render() {
     return (

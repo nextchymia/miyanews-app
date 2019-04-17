@@ -137,7 +137,7 @@ export default class PostList extends React.Component {
     var card = 
     <ListItem button onPress={() => navigate('Post', { link:item.link})}>
           <Left>
-          <Thumbnail source={{uri: imgurl}}/>
+          <Thumbnail square source={{uri: imgurl}}/>
           <Body>
           <Text header>{item.title.rendered}</Text>
           <HTML baseFontStyle={styles.ExcerptText} html={item.excerpt.rendered} />
